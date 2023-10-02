@@ -1,5 +1,7 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+vim.g.mapleader = " "
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -13,8 +15,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
-
 return require('lazy').setup({
   'nvim-lua/plenary.nvim',
   'ThePrimeagen/harpoon',
@@ -22,6 +22,7 @@ return require('lazy').setup({
   'tpope/vim-fugitive',
   'easymotion/vim-easymotion',
   'numToStr/Comment.nvim',
+  'NvChad/nvim-colorizer.lua',
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate'
@@ -29,7 +30,9 @@ return require('lazy').setup({
   {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	  -- or                          , branch = '0.1.x',
-	  dependencies = { {'nvim-lua/plenary.nvim'} }
+	  dependencies = {
+      {'nvim-lua/plenary.nvim'},
+    }
   },
   {
 	  'bluz71/vim-nightfly-colors',
