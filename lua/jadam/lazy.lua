@@ -20,6 +20,8 @@ return require('lazy').setup({
   'ThePrimeagen/harpoon',
   'mbbill/undotree',
   'tpope/vim-fugitive',
+  'tpope/vim-repeat',
+  'tpope/vim-surround',
   'easymotion/vim-easymotion',
   'numToStr/Comment.nvim',
   'NvChad/nvim-colorizer.lua',
@@ -55,5 +57,14 @@ return require('lazy').setup({
 		  {'hrsh7th/cmp-nvim-lsp'}, -- Required
 		  {'L3MON4D3/LuaSnip'},     -- Required
 	  }
+  },
+  {
+    'sudormrfbin/cheatsheet.nvim',
+
+    dependencies = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
   }
 })

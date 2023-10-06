@@ -1,0 +1,14 @@
+# File Searching
+Open NetRw File Tree |  <leader>rw
+Search committed files | <leader><Space>
+Search all files | <C-p>
+Search for matching strings in files | <leader>ps
+
+# Harpoon
+Add file to harpoon | <leader>a
+Toggle harpoon menu | <C-e>
+Navigate to 1st file | <C-h>
+Navigate to 2nd file | <C-j>
+Navigate to 3rd file | <C-k>
+Navigate to 4th file | <C-l>
+
