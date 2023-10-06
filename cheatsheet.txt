@@ -12,3 +12,8 @@ Navigate to 2nd file | <C-j>
 Navigate to 3rd file | <C-k>
 Navigate to 4th file | <C-l>
 
+# Autocomplete
+Select top autocomplete item | <Tab>
+Select top autocomplete item | <C-y>
+Highlight next autocomplete item | <C-n>
+Highlight prev autocomplete item | <C-p>
