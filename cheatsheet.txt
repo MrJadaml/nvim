@@ -7,6 +7,14 @@ Search committed files | <C-g>
 Search all files | <C-p>
 Search for matching strings in files | <leader>ps
 
+## Comment
+Uncomment the current and adjacent commented lines | gcu                   
+Text object for a comment (operator pending mode only.) | gc                      
+Comment or uncomment the highlighted lines | {Visual}gc              
+Comment out block or paragraph | gcap
+Comment or uncomment lines that {motion} moves over | gc{motion}              
+Comment or uncomment [count] lines | gcc                     
+
 ## Autocomplete
 Highlight prev autocomplete item | <C-p>
 Highlight next autocomplete item | <C-n>
