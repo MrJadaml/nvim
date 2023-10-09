@@ -19,12 +19,14 @@ return require('lazy').setup({
   'nvim-lua/plenary.nvim',
   'ThePrimeagen/harpoon',
   'mbbill/undotree',
+  'Raimondi/delimitMate',
+  'tpope/vim-commentary',
   'tpope/vim-fugitive',
   'tpope/vim-repeat',
   'tpope/vim-surround',
   'easymotion/vim-easymotion',
-  'numToStr/Comment.nvim',
   'NvChad/nvim-colorizer.lua',
+  'max397574/better-escape.nvim',
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate'

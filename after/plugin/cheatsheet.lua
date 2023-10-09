@@ -1,4 +1,4 @@
-require("cheatsheet").setup({
+ require("cheatsheet").setup({
   -- Whether to show bundled cheatsheets
 
   -- For generic cheatsheets like default, unicode, nerd-fonts, etc

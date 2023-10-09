@@ -1,19 +1,23 @@
+
+Highlight prev autocomplete item | <C-p>
+
 # File Searching
 Open NetRw File Tree |  <leader>rw
-Search committed files | <leader><Space>
+Search committed files | <C-g>
 Search all files | <C-p>
 Search for matching strings in files | <leader>ps
 
-# Harpoon
-Add file to harpoon | <leader>a
-Toggle harpoon menu | <C-e>
-Navigate to 1st file | <C-h>
-Navigate to 2nd file | <C-j>
-Navigate to 3rd file | <C-k>
-Navigate to 4th file | <C-l>
-
-# Autocomplete
-Select top autocomplete item | <Tab>
-Select top autocomplete item | <C-y>
-Highlight next autocomplete item | <C-n>
+## Autocomplete
 Highlight prev autocomplete item | <C-p>
+Highlight next autocomplete item | <C-n>
+Select top autocomplete item | <C-y>
+Select top autocomplete item | <Tab>
+
+## Harpoon
+Navigate to 4th file | <C-l>
+Navigate to 3rd file | <C-k>
+Navigate to 2nd file | <C-j>
+Navigate to 1st file | <C-h>
+Toggle harpoon menu | <C-e>
+Add file to harpoon | <leader>a
+
