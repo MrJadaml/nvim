@@ -1,6 +1,3 @@
--- Open NetRW
-vim.keymap.set('n', '<leader>rw', vim.cmd.Ex)
-
 -- Move highlighted text up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -31,3 +28,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Disable Ex mode
 vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 
+-- Netrw
+-- Open Netrw from terminal
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  command = "Explore",
+})
+
+-- Open NetRW sidebar
+vim.keymap.set('n', '<leader>rw', vim.cmd.Vex)
+
+-- Tree style
+vim.g.netrw_liststyle = 3
+vim.g.netrw_altv = 1
+vim.g.netrw_banner = 0
+vim.g.netrw_list_hide = [[\(^\|\s\s\)\zs\.\S\+]]
+vim.g.netrw_winsize = 25
