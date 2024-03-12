@@ -24,6 +24,7 @@ return require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-repeat',
   'tpope/vim-surround',
+  'github/copilot.vim',
   'easymotion/vim-easymotion',
   'NvChad/nvim-colorizer.lua',
   'max397574/better-escape.nvim',
