@@ -38,9 +38,21 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- Open NetRW sidebar
 vim.keymap.set('n', '<leader>rw', vim.cmd.Vex)
 
+-- Sync directories. This helps avoid move files error.
+vim.g.netrw_keepdir = 0
+
 -- Tree style
 vim.g.netrw_liststyle = 3
 vim.g.netrw_altv = 1
 vim.g.netrw_banner = 0
 vim.g.netrw_list_hide = [[\(^\|\s\s\)\zs\.\S\+]]
 vim.g.netrw_winsize = 25
+
+-- runs Prettier on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+    -- Use the new formatting function with options
+    vim.lsp.buf.format({ timeout_ms = 1000 })
+  end,
+})
