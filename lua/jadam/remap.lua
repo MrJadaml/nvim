@@ -1,3 +1,7 @@
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Move highlighted text up and down
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -30,23 +34,23 @@ vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 
 -- Netrw
 -- Open Netrw from terminal
-vim.api.nvim_create_autocmd("VimEnter", {
-  pattern = "*",
-  command = "Explore",
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   pattern = "*",
+--   command = "Explore",
+-- })
 
 -- Open NetRW sidebar
-vim.keymap.set('n', '<leader>rw', vim.cmd.Vex)
+-- vim.keymap.set('n', '<leader>rw', vim.cmd.Vex)
 
 -- Sync directories. This helps avoid move files error.
-vim.g.netrw_keepdir = 0
+-- vim.g.netrw_keepdir = 0
 
 -- Tree style
-vim.g.netrw_liststyle = 3
-vim.g.netrw_altv = 1
-vim.g.netrw_banner = 0
-vim.g.netrw_list_hide = [[\(^\|\s\s\)\zs\.\S\+]]
-vim.g.netrw_winsize = 25
+-- vim.g.netrw_liststyle = 3
+-- vim.g.netrw_altv = 1
+-- vim.g.netrw_banner = 0
+-- vim.g.netrw_list_hide = [[\(^\|\s\s\)\zs\.\S\+]]
+-- vim.g.netrw_winsize = 25
 
 -- runs Prettier on save
 vim.api.nvim_create_autocmd("BufWritePre", {

@@ -1,8 +1,4 @@
-
-Highlight prev autocomplete item | <C-p>
-
-# File Searching
-Open NetRw File Tree |  <leader>rw
+## File-Searching
 Search committed files | <C-g>
 Search all files | <C-p>
 Search for matching strings in files | <leader>ps
@@ -19,13 +15,83 @@ Comment or uncomment [count] lines | gcc
 Highlight prev autocomplete item | <C-p>
 Highlight next autocomplete item | <C-n>
 Select top autocomplete item | <C-y>
-Select top autocomplete item | <Tab>
+Complete Co-pilot suggestion | <Tab>
 
 ## Harpoon
-Navigate to 4th file | <C-l>
-Navigate to 3rd file | <C-k>
-Navigate to 2nd file | <C-j>
-Navigate to 1st file | <C-h>
 Toggle harpoon menu | <C-e>
 Add file to harpoon | <leader>a
 
+## Tmux
+List key bindings | <C-a> ?
+Reload tmux configuration | <C-a> r
+
+## Tmux-Pane
+Navigate to right pane | <C-l>
+Navigate to upper pane | <C-k>
+Navigate to lower pane | <C-j>
+Navigate to left pane | <C-h>
+Split pane horizontally | <C-a> "
+Split pane vertically | <C-a> %
+Close current pane | <C-a> x
+Swap pane with next pane | <C-a> }
+Swap pane with previous pane | <C-a> {
+Convert pane into a window | <C-a> !
+Show pane numbers (to switch to) | <C-a> q
+Toggle pane zoom | <C-a> z
+
+## Tmux-Window
+Create new window | <C-a> c
+Close current window | <C-a> &
+Navigate to next window | <C-a> n
+Navigate to previous window | <C-a> p
+List windows | <C-a> w
+Find window | <C-a> f
+Rename current window | <C-a> ,
+
+## Tmux-Sesh
+Detach from current session | <C-a> d
+List sessions | <C-a> s
+List sessions & Windows | <C-a> w
+Attach to last session | tmux attach or tmux a
+Attach to a named session | tmux attach-session -t <name>
+Kill current session | <C-a> :kill-session
+Rename current session | <C-a> $
+
+## Tmux-Copy
+Enter copy mode | <C-a> [
+Exit copy mode | q (when in copy mode)
+Start selection | Space (when in copy mode)
+Copy selection | Enter (when in copy mode)
+Paste last copied buffer | <C-a> ]
+
+## NvimTree
+Toggle Explorer | <C-\>
+Focus on NvimTree | :NvimTreeFindFile
+Refresh NvimTree | R
+Search file | /
+Toggle help | ?
+Toggle hidden files | H
+Toggle git ignored files | I
+Toggle dotfiles | .
+Clear search | <C-_> or <C-/>
+Edit file | Enter
+Edit file in horizontal split | i
+Edit file in vertical split | s
+Edit file in new tab | t
+Close node (collapse directory) | x
+Close node and its children | X
+Create a file | a 
+Create a directory | a + /
+Rename or move file/directory | r
+Copy filename to clipboard | y
+Copy relative path to clipboard | Y
+Delete file/directory (to trash if configured) | d
+Permanently delete file/directory | D
+Navigate up | k or Arrow Up
+Navigate down | j or Arrow Down
+Navigate to parent directory | h or Arrow Left
+Open directory | l or Arrow Right
+First child | J
+Last child | K
+Next sibling | >
+Previous sibling | <

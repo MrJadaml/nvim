@@ -13,6 +13,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.opt.swapfile = false
+vim.opt.backup = false
+
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
@@ -29,4 +32,3 @@ vim.g.mapleader = " "
 vim.cmd([[
     autocmd BufLeave,FocusLost * silent! wall
 ]])
-
