@@ -2,23 +2,25 @@
 vim.opt.termguicolors = true
 vim.api.nvim_set_keymap('n', '<C-\\>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
+local function my_on_attach(bufnr)
+  local api = require("nvim-tree.api")
+
+
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  vim.keymap.set('n', 'w', api.node.navigate.parent_close, opts('Close Directory'))
+  api.config.mappings.default_on_attach(bufnr)
+end
+
 require('nvim-tree').setup({
+  on_attach = my_on_attach,
   filters = {
     dotfiles = false,
+  },
+  diagnostics = {
+    enable = true,
   },
   disable_netrw = true,
   hijack_netrw = true,
@@ -32,7 +34,7 @@ require('nvim-tree').setup({
   view = {
     adaptive_size = false,
     side = "left",
-    width = 30,
+    width = 40,
     preserve_window_proportions = true,
   },
   git = {
@@ -48,6 +50,7 @@ require('nvim-tree').setup({
     },
   },
   renderer = {
+    group_empty = true,
     root_folder_label = false,
     highlight_git = true,
     highlight_opened_files = "none",
@@ -85,5 +88,8 @@ require('nvim-tree').setup({
         },
       },
     },
+  },
+  sort = {
+    sorter = "case_sensitive",
   },
 })

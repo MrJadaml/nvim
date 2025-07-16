@@ -19,6 +19,8 @@ require('telescope').setup {
       "node_modules/*",
       "%.lock",
     },
-    hidden_files = false
+    hidden_files = false,
+    vimgrep_arguments = { unpack(require('telescope.config').values.vimgrep_arguments) },
+    find_command = { 'fd', '--type', 'f', '--hidden', '--strip-cwd-prefix' },
   }
 }
