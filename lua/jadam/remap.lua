@@ -52,11 +52,5 @@ vim.keymap.set('n', 'Q', '<Nop>', { noremap = true })
 -- vim.g.netrw_list_hide = [[\(^\|\s\s\)\zs\.\S\+]]
 -- vim.g.netrw_winsize = 25
 
--- runs Prettier on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function()
-    -- Use the new formatting function with options
-    vim.lsp.buf.format({ timeout_ms = 1000 })
-  end,
-})
+-- Auto-format on save is now handled by conform.nvim in after/plugin/conform.lua
+-- This provides better formatting with prettier and other formatters

@@ -12,6 +12,15 @@ lsp.on_attach(function(client, bufnr)
     { noremap = true, silent = true })
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = bufnr })
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = bufnr })
+
+  -- Configure hover window to show more content
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+    vim.lsp.handlers.hover, {
+      max_width = 120,
+      max_height = 30,
+      border = "rounded"
+    }
+  )
 end)
 
 lsp.ensure_installed({
@@ -21,6 +30,16 @@ lsp.ensure_installed({
   'mdx_analyzer',
   'pyright',
 })
+
+-- Ensure formatters are installed
+require('mason').setup()
+require('mason-lspconfig').setup()
+
+-- Install prettier via Mason
+local mason_registry = require('mason-registry')
+if not mason_registry.is_installed('prettier') then
+  vim.cmd('MasonInstall prettier')
+end
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()

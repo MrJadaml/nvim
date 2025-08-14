@@ -84,6 +84,21 @@ return require('lazy').setup({
     }
   },
   {
+    'stevearc/conform.nvim',
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
+  },
+  {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
@@ -137,6 +152,10 @@ return require('lazy').setup({
         'MeanderingProgrammer/render-markdown.nvim',
         opts = {
           file_types = { "markdown", "Avante" },
+          code = {
+            -- Disable code block rendering to avoid the Blob error
+            enabled = false,
+          },
         },
         ft = { "markdown", "Avante" },
       },
